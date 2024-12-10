@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about startapp</title>
-</head>
-<body>
-    <a href="/" class="btn">Home</a>
-    <p>In Django, the startapp command is used to create a new application within a project, providing a structured way to organize and develop specific functionalities. An app in Django is a modular component that encapsulates features such as models, views, templates, and static files, making it reusable and maintainable. To create an app, run python manage.py startapp appname, which generates a directory with essential files like models.py, views.py, admin.py, and apps.py. After creating the app, you must add it to the INSTALLED_APPS list in the project's settings.py file to integrate it into the project. This modularity allows developers to build scalable and feature-rich web applications efficiently.</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+<a href="/" class="btn">Home</a>
+<p>
+  In Django, the startapp command is used to create a new application within a
+  project, providing a structured way to organize and develop specific
+  functionalities. An app in Django is a modular component that encapsulates
+  features such as models, views, templates, and static files, making it
+  reusable and maintainable. To create an app, run python manage.py startapp
+  appname, which generates a directory with essential files like models.py,
+  views.py, admin.py, and apps.py. After creating the app, you must add it to
+  the INSTALLED_APPS list in the project's settings.py file to integrate it into
+  the project. This modularity allows developers to build scalable and
+  feature-rich web applications efficiently.
+</p>
+{% endblock %}
