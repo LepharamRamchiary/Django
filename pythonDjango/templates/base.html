@@ -1,3 +1,4 @@
+{% load static tailwind_tags %}
 <!-- base.html -->
 {% load static %}
 
@@ -8,12 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django</title>
     <link rel="stylesheet" href="{% static 'style.css' %}?v=1">
+    {% tailwind_css %}
 </head>
 <body>
 
     <!-- Header -->
     <header>
-        <div class="logo">My Website</div>
+        <div class="logo bg-blue-600">My Website</div>
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
