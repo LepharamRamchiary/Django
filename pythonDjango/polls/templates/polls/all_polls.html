@@ -1,6 +1,19 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <a href="startapp/" class="btn">Startapp doc</a>
 <a href="/" class="btn">Home</a>
 <h1>Hello Jinja2</h1>
+<div class="flex flex-wrap gap-4">
+  {% for tea in teas %}
+  <div class="bg-slate-300 p-4 rounded shadow-md">
+    <img
+      class="h-32 w-32 object-cover shadow-lg"
+      src="{{ tea.image.url }}"
+      alt="{{ tea.name }}"
+    />
+    <h3 class="mt-2 text-lg font-semibold">{{ tea.name }}</h3>
+    <a href='{% url 'tea_details' tea.id %}'>{{tea.type}} - {{tea.id}}</a>
+    
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}
